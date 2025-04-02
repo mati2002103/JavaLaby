@@ -1,5 +1,4 @@
 package pl.wit.jj;
-
 /**
  * Hello world!
  *

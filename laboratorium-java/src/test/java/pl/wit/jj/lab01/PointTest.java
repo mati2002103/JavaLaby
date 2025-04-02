@@ -62,8 +62,11 @@ class PointTest {
 		Point pt1 = new Point(5.31f,8.72f);
 		Point pt2 = new Point(4.69f,1.28f);
 		Point pt3 =  pt1.addAndCreate(pt2);
-		assertEquals(pt3.getX(),pt1.getX()+pt2.getX());
-		assertEquals(pt3.getY(),pt1.getY()+pt2.getY());
+		assertNotSame(pt1,pt3);
+		assertEquals(10.f,pt3.getX());
+		assertEquals(10.f,pt3.getY());
+		assertEquals(5.31f,pt1.getX());
+		assertEquals(8.72f,pt1.getY());
 	}
 	@Test
 	void NullAddAndCreateTest(){

@@ -14,10 +14,11 @@
     <!-- Define the loggers -->
     <Loggers>
         <!-- Root Logger -->
-        <Root level="trace">
-            <AppenderRef ref="ConsoleAppender" />
+        <Root level="INFO">
+            <AppenderRef ref="ConsoleAppender"/>
             <AppenderRef ref="FileAppender" />
         </Root>
+    
         <!-- Logger for specific package -->
         <Logger name="com.example.myapp" level="debug">
             <AppenderRef ref="FileAppender" />
