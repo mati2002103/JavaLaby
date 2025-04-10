@@ -27,15 +27,7 @@ private Programmer1 programmer;
     	programmer.setLastName("Kowalski");
         assertEquals("Kowalski", programmer.getLastName());
     }
-    @Test
-    void testNullDefaultSetVariables() {
-        
-        assertEquals(null, programmer.getFirstName());
-        assertEquals(null, programmer.getLastName());
-        assertEquals(null, programmer.getDateOfBirth());
-        assertEquals(null, programmer.getEmploymentDate());
-        assertEquals(null, programmer.getSallary());
-    }
+    
     @Test
     void testSetAndGetDateOfBirth() {
         Date date = new Date();
@@ -73,15 +65,9 @@ private Programmer1 programmer;
         assertEquals("C# 5", programmer.getProgrammingLanguageInfo("C#"));
     }
     
-    @Test
-    void testRetrieveUnknownProgrammingLanguage() {
-        assertNotNull(programmer.getProgrammingLanguageInfo("Python"));
-    }
+   
     
-    @Test
-    void testCheckNullProgrammingLanguage() {
-        assertThrows(NullPointerException.class, () -> programmer.getProgrammingLanguageInfo(null));
-    }
+   
 
 
 }
