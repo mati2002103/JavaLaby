@@ -53,7 +53,8 @@ public class StudentDemo extends AbstractDemo {
 		else {
 
 			this.mapPoints.put(criteria, points);
-
+			log.debug("Dodano punkty: " + getAdditionalInfo());
+			log.trace("Dodano do kryterium: \"" + criteria + "\" wartość: " + points);
 		}
 
 	}
